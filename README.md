@@ -75,9 +75,9 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	new file:   simulation_code/code1.R
-  new file:   simulation_code/code2.py
-  new file:   simulation_code/code3.cpp
-  new file:   simulation_code/code_wrapper.sh
+  	new file:   simulation_code/code2.py
+  	new file:   simulation_code/code3.cpp
+  	new file:   simulation_code/code_wrapper.sh
 ```
 ```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
 ### Cloning an existing repository
