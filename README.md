@@ -81,6 +81,17 @@ Changes to be committed:
 ```
 ```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
 ### Cloning an existing repository
+Often, you want to make changes to someone else's code, or you want to be able to access your code from different computers or servers. To do this, you can clone an existing respository onto your local computer or server.
+```
+$ git clone "https://github.com/s.bruin/first_repo"
+```
+Be careful when you are working on a repository on different computers (collaborating with yourself). It's easy to make conflicting changes and a minor headache to unravel them, though if you have committed regularly and properly it is always possible. To avoid this, follow this order whenever you make changes: pull all new changes (even if you don't think there are any, it can't hurt!), make your desired changes, then commit and push.
+```
+$ git pull 
+# make changes
+$ git commit -m "message about commit"
+$ git push -u origin main
+```
 
 ### Recovering previous version
 https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
