@@ -1,5 +1,5 @@
 # GitGuide
-Guide to using git/github for the signaling systems lab, written by Allison. A basic introduction is given below, and more advanced uses are described [within](./Advanced.md).
+Guide to using git/github for the signaling systems lab, written by Allison. A basic introduction is given below, and more advanced uses will be described [within](./Advanced.md) (once I get around to doing that).
 
 ## Why use Git?
 Git has three main uses for our lab: public accessibility of code, version control, and collaboration. Previously, most lab members have commited repositories of completed code for availability to the public. Though this is useful, continued use of git throughout a project also provides the advantage of version control.
@@ -25,13 +25,65 @@ $ git config --global user.email "s.bruin@ucla.edu"
 
 You will authenticate your account once you clone or push a repository.
 
-### Create a repository on your computer
-
-### Committing to a repository
-
 ### Create a repository on github
+Usually it's easiest to create a new repository on github, then initialize the repository in your terminal. Creating a repository on Github is easy: go to the homepage and click the green "new" button, then give it a name and follow the intructions. Once you create a repo, github will give you instructions on how to initialize the repository on your computer. The necessary component is the URL, which will appear in a box on the screen.
+
+Alternatively, you can initialize a repository within the Signaling Systems organization. To do this, go to https://github.com/orgs/signalingsystemslab/repositories and click the green "new repository" button. This is a good idea if you're working on a project that will be published as software with various versions and releases. Otherwise, it's not necessary, and you can wait to make an organization repository until you submit your paper (just with your finalized code). Alternatively, you can always add your personal repositories to the organizaitonal account by forking or [transfering the repository](https://stackoverflow.com/questions/8157615/github-how-do-i-add-my-own-projects-to-an-organization-account). 
+
+We will continue as if the URL of your new repository is ```https://github.com/s.bruin/first_repo```
+
+### Initialize a repository on your computer
+Navigate to your directory of interest in your terminal. 
+#### Brand new directory
+If it is a brand new directory, you will want to create a README file with instructions.
+```
+$ git init
+$ git add README.md
+$ git branch -M main
+$ git remote add origin "https://github.com/s.bruin/first_repo"
+$ git status
+$ git commit -m "first commit"
+$ git push -u origin main
+```
+```git init``` initializes the repository on your computer (referred to as "local"). ```git add README.md``` tells git that you would like to track the file named README.md. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   README.md
+```
+```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
+
+### Existing directory
+If it is an existing directory, you will want to add all the files that you want git to track. Let's say you have a subdirectory containing all your important code, titled ```simulation_code```. 
+```
+$ git init
+$ git add simulation_code/
+$ git branch -M main
+$ git remote add origin "https://github.com/s.bruin/first_repo"
+$ git status
+$ git commit -m "simulation_code commit"
+$ git push -u origin main
+```
+```git init``` initializes the repository on your computer (referred to as "local"). ```git add README.md``` tells git that you would like to track the file named README.md. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   simulation_code/code1.R
+  new file:   simulation_code/code2.py
+  new file:   simulation_code/code3.cpp
+  new file:   simulation_code/code_wrapper.sh
+```
+```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
+### Cloning an existing repository
 
 ### Recovering previous version
-
+https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 ## Other resources
 [Git cheat sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdfhttps://training.github.com/downloads/github-git-cheat-sheet.pdf)
+[Git commands and explanations](https://git-scm.com/docs)
