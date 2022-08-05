@@ -97,4 +97,7 @@ $ git push -u origin main
 https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
 ## Other resources
 [Git cheat sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdfhttps://training.github.com/downloads/github-git-cheat-sheet.pdf)
+
 [Git commands and explanations](https://git-scm.com/docs)
+
+[Github Guide to Git](https://github.com/git-guides)
