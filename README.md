@@ -59,7 +59,7 @@ $ git status
 $ git commit -m "first commit"
 $ git push -u origin main
 ```
-```git init``` initializes the repository on your computer (referred to as "local"). ```git add README.md``` tells git that you would like to track the file named README.md. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
+```git init``` initializes the repository on your computer (referred to as "local"). ```touch README.md``` creates a README file (like what you're reading right now). If you already have this file, it will just update the timestamp. ```git add README.md``` tells git that you would like to track the file named README.md. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
 ```
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -74,6 +74,8 @@ Changes to be committed:
 If it is an existing directory, you will want to add all the files that you want git to track. Let's say you have a subdirectory containing all your important code, titled ```simulation_code```. 
 ```
 $ git init
+$ touch README.md
+$ git add README.md
 $ git add simulation_code/
 $ git branch -M main
 $ git remote add origin "https://github.com/s.bruin/first_repo"
@@ -81,7 +83,7 @@ $ git status
 $ git commit -m "simulation_code commit"
 $ git push -u origin main
 ```
-```git init``` initializes the repository on your computer (referred to as "local"). ```git add README.md``` tells git that you would like to track the file named README.md. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
+```git init``` initializes the repository on your computer (referred to as "local"). ```touch README.md``` creates a README file (like what you're reading right now). If you already have this file, it will just update the timestamp. Github also has a feature where it will display the content in your README.md when you or others view your repository on github. ```git add README.md``` tells git that you would like to track the file named README.md. Similarly, ```git add simulation_code/*``` tells git that you would like to track the directory called ```simulation_code``` and all subfiles of ```simulation_code```. You will need to ```git add``` all directories and files with your code, but make sure not to add data or figures; the file size will be too large, and Github will not let you upload them. ```git branch -M main``` renames your primary branch. Git lets you make separate "branches" of your repository that can each contain separate versions of your code. The default branch is called "master", but we like to rename it to "main". Working with different branches will eventually be explained in the [advanced file](./Advanced.md)) ```git status``` asks git to show you the status of your working tree. You should expect to see something like the following:
 ```
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -94,6 +96,10 @@ Changes to be committed:
   	new file:   simulation_code/code_wrapper.sh
 ```
 ```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
+
+### Authentication
+At some point when setting up Github, it will ask you to authenticate. **This has gotten more complicated recently, so I haven't written a good explanation yet. In the meantime, if you need to authenticate, come see me and ask about it.**
+
 ### Cloning an existing repository
 Often, you want to make changes to someone else's code, or you want to be able to access your code from different computers or servers. To do this, you can clone an existing respository onto your local computer or server.
 ```
