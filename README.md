@@ -51,6 +51,7 @@ Navigate to your directory of interest in your terminal.
 If it is a brand new directory, you will want to create a README file with instructions.
 ```
 $ git init
+$ touch README.md
 $ git add README.md
 $ git branch -M main
 $ git remote add origin "https://github.com/s.bruin/first_repo"
