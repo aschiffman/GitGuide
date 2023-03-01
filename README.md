@@ -25,14 +25,27 @@ $ git config --global user.email "s.bruin@ucla.edu"
 
 You will authenticate your account once you clone or push a repository.
 
-### Create a repository on github
-Usually it's easiest to create a new repository on github, then initialize the repository in your terminal. Creating a repository on Github is easy: go to the homepage and click the green "new" button, then give it a name and follow the intructions. Once you create a repo, github will give you instructions on how to initialize the repository on your computer. The necessary component is the URL, which will appear in a box on the screen.
+### Step 1. Create a repository on github
+#### Personal Repository
+You want to create a new repository on github, then initialize the repository in your terminal.
+1. Go to https://github.com/ and click the green "new" button
+2. Give your repository a name (think carefully about this -- you can't change it!) and a description
+3. You can make your repository public or private. This setting can easily be changed later.
+4. Press "Create Repository". 
+5. Continue to Step 2
 
-Alternatively, you can initialize a repository within the Signaling Systems organization. To do this, go to https://github.com/orgs/signalingsystemslab/repositories and click the green "new repository" button. This is a good idea if you're working on a project that will be published as software with various versions and releases. Otherwise, it's not necessary, and you can wait to make an organization repository until you submit your paper (just with your finalized code). Alternatively, you can always add your personal repositories to the organizaitonal account by forking or [transfering the repository](https://stackoverflow.com/questions/8157615/github-how-do-i-add-my-own-projects-to-an-organization-account). 
+#### Signaling Systems repository
+All final code should be in the Signaling Systems organizational account. One way to accomplish this is to create a repository within the Signaling Systems organization, instead of in your personal account. This can be done easily as well.
+You want to create a new repository on github, then initialize the repository in your terminal.
+1. Go to https://github.com/orgs/signalingsystemslab/repositories and click the green "new repository" button
+2. Give your repository a name (think carefully about this -- you can't change it!) and a description
+3. You can make your repository public or private. This setting can easily be changed later.
+4. Press "Create Repository". 
+5. Continue to Step 2
 
+### Step 2. Initialize a repository on your computer
 We will continue as if the URL of your new repository is ```https://github.com/s.bruin/first_repo```
 
-### Initialize a repository on your computer
 Navigate to your directory of interest in your terminal. 
 #### Brand new directory
 If it is a brand new directory, you will want to create a README file with instructions.
@@ -92,6 +105,12 @@ $ git pull
 $ git commit -m "message about commit"
 $ git push -u origin main
 ```
+
+## Publishing final code
+When you submit a paper, make sure all your code is in a Signaling Systems repository. If you already had a Signaling Systems repo, make sure it's updated with current versions of everything. If you previously had a personal repository, you can always add your personal repositories to the organizational account by forking or [transfering the repository](https://stackoverflow.com/questions/8157615/github-how-do-i-add-my-own-projects-to-an-organization-account). 
+
+If you have finalized code on your computer but have not made a Github repository, follow the instructions above to create a repository [within the Signaling Systems organization](Signaling-Systems-repository). Add files by clicking `Add file`>`Upload Files` or initialize your repository from the command line.
+
 
 ### Recovering previous version
 https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things
