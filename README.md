@@ -1,5 +1,5 @@
 # GitGuide
-Guide to using git/github for the signaling systems lab, written by Allison. A basic introduction is given below, and more advanced uses will be described [within](./Advanced.md) (once I get around to doing that).
+A brief guide to basic uses of git/github for the signaling systems lab, written by Allison. Some links to more advanced uses are provided [within](./Advanced.md).
 
 ## Why use Git?
 Git has three main uses for our lab: public accessibility of code, version control, and collaboration. Previously, most lab members have commited repositories of completed code for availability to the public. Though this is useful, continued use of git throughout a project also provides the advantage of version control.
@@ -98,7 +98,7 @@ Changes to be committed:
 ```git commit -m "first commit"``` "commits" your change to git's memory, permanently storing it with a specific hash (unique ID) so that it can be directly referenced, restored, reversed, etc. in the future. ```git push -u origin main``` pushes your changes to the "origin", which is your github repository. 
 
 ### Authentication
-At some point when setting up Github, it will ask you to authenticate. **This has gotten more complicated recently, so I haven't written a good explanation yet. In the meantime, if you need to authenticate, come see me and ask about it.**
+You will have to authenticate git on your personal computer. This can no longer be done with a username and password on the command line; instead, you have to set up a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 ### Cloning an existing repository
 Often, you want to make changes to someone else's code, or you want to be able to access your code from different computers or servers. To do this, you can clone an existing respository onto your local computer or server.
